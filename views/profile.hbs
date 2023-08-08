@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>User Profile</title>
+	<style>
+		
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+	<link href="profile.css" rel="stylesheet">
+</head>
+
+<body>
+	<header class="header">
+		<a href="/home">
+			<img class="logo" src="Logohome1.png" alt="Logo">
+		</a>
+		<nav class="navigation">
+			<a href="GoCommute.html">GoCommute</a>
+			<a href="Report.html">Report</a>
+			<a href="Profile.html">
+				<img id="profilePicHeader" class="profile-pic" src="default.jpg" alt="Profile Picture">
+			</a>
+		</nav>
+	</header>
+	<div class="container">
+		<h1>Welcome, <span id="username"></span>!</h1>
+		<div class="form-container">
+			<label for="name-input">Name:</label>
+			<input type="text" id="name-input" placeholder="Enter your name">
+			<input type="submit" id="save-name-button" value="Save Name">
+		</div>
+		<div class="profile-picture-container">
+			<img id="profile-pic" src="default.jpg" alt="Profile Picture">
+			<input type="file" id="profile-pic-input" accept="image/*" style="display: none;">
+			<div class="settings-button"></div>
+			<div class="hover-menu">
+				<a id="change-profile-pic">Change Profile Picture</a>
+				<a id="delete-profile-pic">Delete Profile Picture</a>
+			</div>
+		</div>
+		<div id="alert" class="alert" style="display: none;">Profile picture saved!</div>
+		<a href="/logout" class="logout-button">Logout</a>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+	<script src="profile.js"></script>
+</body>
+</html>

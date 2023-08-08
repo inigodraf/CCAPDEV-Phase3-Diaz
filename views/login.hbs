@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link href="login.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+    <h1>Login</h1>
+    {{#if error}}
+        <p class="error-message">{{ error }}</p>
+    {{/if}}
+    <form action="/login" method="post">
+        <div class="form-container hidden" id="login-form">
+            <input type="text" name="username" placeholder="Username" id="username-input" required>
+            <input type="password" name="password" placeholder="Password" id="password-input" required>
+            <button onclick="login()">Login</button>
+            <p id="error-message" style="color: red; margin-top: 10px; display: none;"></p>
+        </div>
+    </form>
+     <button class="back-button hidden" onclick="goBack()">Back</button>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

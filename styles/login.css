@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #BBF7FE;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    margin-bottom: -10px;
+    width: 500px;
+    transition: all 1.5s ease;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -45%);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    transition: transform .5s ease, opacity .5s ease;
+    opacity: 100;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+    width: 100%;
+}
+
+.form-container input {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: transform .5s ease, opacity .5s ease;
+}
+
+.form-container button {
+    padding: 15px 40px;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.9s ease, opacity 0.9s ease;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+

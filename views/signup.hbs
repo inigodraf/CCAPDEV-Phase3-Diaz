@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="signup-text">Sign Up</h1>
+        <form action="/signup" method="POST"> 
+            <div class="form-container" id="signup-form">
+                <input type="text" name="username" placeholder="Username" id="username-input">      
+                <input type="password" name="password" placeholder="Password" id="password-input">
+                <button type="submit">Sign up</button> 
+            </div>
+        </form>
+
+        <button class="back-button" onclick="goBack1()">Back</button>
+    </div>
+    <script src="signup.js"></script>
+</body>
+
+</html>
