@@ -10,9 +10,6 @@
 <body>
 	<div class="container">
     <h1>Login</h1>
-    {{#if error}}
-        <p class="error-message">{{ error }}</p>
-    {{/if}}
     <form action="/login" method="post">
         <div class="form-container hidden" id="login-form">
             <input type="text" name="username" placeholder="Username" id="username-input" required>
