@@ -60,8 +60,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'styles')));
 app.use(express.static(path.join(__dirname, 'pictures')));
 app.use(express.static(path.join(__dirname, 'src')));
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+
 
 app.get('/', (req, res) => {
   res.render('index');
